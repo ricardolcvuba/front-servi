@@ -6,6 +6,7 @@ document.getElementById("tipoUsuario").addEventListener("change", function () {
 
 // Validación en tiempo real del correo electrónico
 document.getElementById("email").addEventListener("input", function () {
+  /* Conectarse  */
   const feedback = document.getElementById("emailFeedback");
   if (!this.value.includes("@")) {
     feedback.textContent = "El correo debe contener '@'";
@@ -69,6 +70,7 @@ document.getElementById("registroForm").addEventListener("submit", function (e) 
     usuario.imagenes = [...document.getElementById("imagenesLogo").files].map(f => f.name);
   }
 
+  /* Cambiar esto por comunicarse con el Back */
   const lista = JSON.parse(localStorage.getItem("usuariosServi")) || [];
   lista.push(usuario);
   localStorage.setItem("usuariosServi", JSON.stringify(lista));
