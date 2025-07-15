@@ -6,7 +6,7 @@ document.getElementById("tipoUsuario").addEventListener("change", function () {
 
 // Validación en tiempo real del correo electrónico
 document.getElementById("email").addEventListener("input", function () {
-  /* Conectarse  */
+  /* Conectarse al back */
   const feedback = document.getElementById("emailFeedback");
   if (!this.value.includes("@")) {
     feedback.textContent = "El correo debe contener '@'";
